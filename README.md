@@ -16,3 +16,8 @@ This project is currently in development.
 Created by **Cookie_dinosaur**.
 
 > Note: Some of the Coding was made with Copilot
+
+
+## Tech / Languages
+- Languages: **HTML**, **CSS**, **JavaScript**
+- Tools: **VS Code**
