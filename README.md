@@ -9,6 +9,12 @@ Beyond basic scheduling, MintSchedule is built around the idea of **smart automa
 - Fast event creation and day-to-day planning  
 - Optional automations tied to schedules (smart home / routines)
 
+## Demo
+
+🌐 **[https://csmeifter.github.io/MintSchedule/](https://csmeifter.github.io/MintSchedule/)**
+
+> If the page looks unstyled, hard refresh (Ctrl+F5).
+
 ## Status
 This project is currently in development.
 
