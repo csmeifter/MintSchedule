@@ -11,7 +11,7 @@ Beyond basic scheduling, MintSchedule is built around the idea of **smart automa
 
 ## Demo
 
-🌐 **[https://csmeifter.github.io/MintSchedule/](https://csmeifter.github.io/MintSchedule/)**
+🌐 ****
 
 > If the page looks unstyled, hard refresh (Ctrl+F5).
 
