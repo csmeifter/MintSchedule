@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MintSchedule</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ── Auth screen ─────────────────────────────────────── -->
+    <div id="auth-view" class="view active">
+      <div id="auth-card">
+        <h2 id="auth-title">Welcome back</h2>
+        <p id="auth-subtitle">Sign in to MintSchedule</p>
+        <form id="auth-form" novalidate>
+          <label for="auth-email">Email</label>
+          <input id="auth-email" type="email" autocomplete="email" required placeholder="you@example.com" />
+
+          <label for="auth-password">Password</label>
+          <input id="auth-password" type="password" autocomplete="current-password" required placeholder="••••••••" />
+
+          <div id="auth-error" role="alert"></div>
+          <button id="auth-submit" type="submit">Sign in</button>
+        </form>
+        <p id="auth-toggle">Don't have an account? <a>Sign up</a></p>
+      </div>
+    </div>
+
+    <!-- ── Main app (hidden until logged in) ──────────────── -->
+    <div id="main-content" class="hidden">
+
+      <header>
+        <h1>🌿 MintSchedule</h1>
+        <nav>
+          <button id="nav-calendar" class="active">Calendar</button>
+          <button id="nav-automations">Automations</button>
+          <button id="nav-notifications">
+            Notifications
+            <span id="notif-badge" style="display:none; background:#fff; color:var(--mint-dark);
+              border-radius:50%; font-size:0.7rem; padding:1px 5px; margin-left:4px;"></span>
+          </button>
+          <button id="nav-logout">Sign out</button>
+        </nav>
+      </header>
+
+      <main>
+
+        <!-- Calendar view -->
+        <section id="calendar-view" class="view active">
+          <div id="calendar-header">
+            <button id="cal-prev">&#8592;</button>
+            <h2 id="calendar-title"></h2>
+            <button id="cal-next">&#8594;</button>
+          </div>
+
+          <button id="add-event-btn">+ Add Event</button>
+
+          <div id="event-form-container" class="hidden">
+            <form id="event-form">
+              <label for="event-date">Date</label>
+              <input id="event-date" type="date" required />
+
+              <label for="event-title">Title</label>
+              <input id="event-title" type="text" placeholder="Event title" required />
+
+              <label for="event-time">Time (optional)</label>
+              <input id="event-time" type="time" />
+
+              <label for="event-note">Note (optional)</label>
+              <textarea id="event-note" placeholder="Any notes…"></textarea>
+
+              <div class="form-actions">
+                <button type="submit">Save</button>
+                <button type="button" id="event-cancel">Cancel</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="calendar-grid"></div>
+
+          <div id="events-list"></div>
+        </section>
+
+        <!-- Automations view -->
+        <section id="automations-view" class="view">
+          <h2>Automations</h2>
+          <div id="automations-list"></div>
+        </section>
+
+        <!-- Notifications view -->
+        <section id="notifications-view" class="view">
+          <h2>Notifications</h2>
+          <div id="notifications-list"></div>
+        </section>
+
+      </main>
+    </div><!-- /#main-content -->
+
+  </div><!-- /#app -->
+
+  <!-- Scripts loaded in dependency order -->
+  <script src="js/auth.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/automation.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
